@@ -10,7 +10,7 @@ Usage
 -----
 
 ```
-    $ git clone mhoush/compose-up-daemon
+    $ git clone https://github.com/m-housh/compose-up-daemon.git
     $ cd compose-up-daemon
     $ chmod +x ./compose-up.daemon.sh
     $ cp ./com.compose-up.plist ~/Library/LaunchAgents/com.<whatever>.plist
