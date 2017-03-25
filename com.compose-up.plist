@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- This is an example plist to use the compose-up.daemon.sh script -->
+<dict>
+  <key>KeepAlive</key>
+  <true/>
+  <key>Label</key>
+  <!-- #########################################-->
+  <!-- UPDATE THE AGENT/DAEMON NAME -->
+  <!-- #########################################-->
+  <string>com.compose-up</string>
+  <key>ProgramArguments</key>
+  <array>
+      <!-- ################################### -->
+      <!-- UPDATE THE FILE PATH -->
+      <!-- ################################### -->
+      <string>/Path/to/compose-up.daemon.sh</string>
+      <string>--file</string>
+      <!-- ################################### -->
+      <!-- UPDATE THE FILE PATH -->
+      <!-- ################################### -->
+      <string>/Path/to/your/docker-compose.yml</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardErrorPath</key>
+  <!-- Set the error log path -->
+  <string>/tmp/com.compose-up.log</string>
+  <key>StandardOutPath</key>
+  <!-- Set the out log path (these are all the logs as if you run -->
+  <!-- docker-compose up -->
+  <string>/tmp/com.compose-up.out.log</string>
+  <key>EnableTransactions</key>
+  <true/>
+  <key>ExitTimeOut</key>
+  <!-- Length of time to allow for graceful shutdown -->
+  <integer>60</integer>
+</dict>
+</plist>
